@@ -21,10 +21,10 @@ public class GitHubConfig {
 
     @Value("${guardian.integration.github.coc.repo:Conduct-Guardian}")
     private String repo;
-    
+
     @Bean
     @Primary
-    CodeOfConductProvider githubCodeOfConductProvider(GitHubClient gitHubClient) {
+    public CodeOfConductProvider githubCodeOfConductProvider(GitHubClient gitHubClient) {
         return new GitHubCodeOfConductProvider(gitHubClient, owner, repo);
     }
 }
