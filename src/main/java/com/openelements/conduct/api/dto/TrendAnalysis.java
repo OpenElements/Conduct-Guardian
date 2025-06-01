@@ -1,5 +1,9 @@
 package com.openelements.conduct.api.dto;
 
-public class TrendAnalysis {
-    
-}
+import org.jspecify.annotations.NonNull;
+
+public record TrendAnalysis(
+    @NonNull String trend,
+    double changePercentage,
+    @NonNull String description
+) {}
