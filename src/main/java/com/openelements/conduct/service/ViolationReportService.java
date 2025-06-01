@@ -31,7 +31,7 @@ public class ViolationReportService {
         Objects.requireNonNull(checkResult, "checkResult must not be null");
         
         String title = checkResult.message().title() != null ? checkResult.message().title() : "No Title";
-        String content = checkResult.message().content();
+        String content = checkResult.message().message();
         
         ViolationReport report = new ViolationReport(
             title,
